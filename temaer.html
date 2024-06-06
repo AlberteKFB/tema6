@@ -6,6 +6,12 @@
     <title>Portofolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/generel.css" />
+    <meta name="robots" content="noindex" />
+    <link
+    rel="icon"
+    type="image/png"
+    href="favicon/faviconab/favicon-32x32.png"
+  />
   </head>
   <body>
     <header class="header_tema">
@@ -57,37 +63,66 @@
       </div>
       <div id="temasite">
         <h1>Gå på opdagelse i mine projekter</h1>
-        <ul>
+        <!-- <ul>
           <li><a href="temaer.html#projekt1">Studiestartsprøven</a></li>
           <li><a href="temaer.html#projekt2">Emnesite- Roomies</a></li>
           <li><a href="temaer.html#projekt3">Animation</a></li>
           <li><a href="temaer.html#projekt4">Passionssite</a></li>
           <li><a href="temaer.html#projekt5">Virksomhedssite- Åbenbar</a></li>
-        </ul>
+        </ul> -->
+        <section class="links-grid">
+          <a href="temaer.html#projekt1" class="circle-link"
+            >Studiestartsprøven</a
+          >
+          <a href="temaer.html#projekt2" class="circle-link"
+            >Emnesite- Roomies</a
+          >
+          <a href="temaer.html#projekt3" class="circle-link">Animation</a>
+          <a href="temaer.html#projekt4" class="circle-link">Passionssite</a>
+          <a href="temaer.html#projekt5" class="circle-link"
+            >Virksomhedssite- Åbenbar</a
+          >
+        </section>
+        <div class="snirkel">
+          <img src="img/snoning.svg" alt="snirkel" />
+        </div>
         <div class="tema_container">
-          <div class="tema_item tema1">
+          <div id="projekt1" class="tema_item tema1">
             <img
               class="tema1bil"
               src="img/studiestart.png"
               alt="Studiestartsprøven"
             />
-            <p id="projekt1">Placeholder text for tema 1.</p>
+            <p>
+              Placeholder text for tema 1. Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Omnis, suscipit voluptas modi
+              aliquid officia nulla eaque consectetur, dolorem nesciunt ut est
+              vero vel inventore? Tenetur quos doloribus odio aliquam ipsum! </br>
+              <a
+                href="https://afbakvarel.dk/02_web/01_website/index.html"
+                class="blue-button"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tema 2
+              </a>
+            </p>
           </div>
-          <div class="tema_item tema2">
+          <div id="projekt2" class="tema_item tema2">
             <img class="tema2bil" src="img/emnesite.png" alt="Emnesite" />
-            <p id="projekt2">Placeholder text for tema 2.</p>
+            <p>Placeholder text for tema 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, quos. Harum omnis commodi minus sapiente qui a rerum odit illum neque, quam ex! Maxime assumenda iste in saepe voluptate ex.</p>
           </div>
-          <div class="tema_item tema3">
+          <div id="projekt3" class="tema_item tema3">
             <img class="tema3bil" src="img/animation.png" alt="Spil" />
-            <p id="projekt3">Placeholder text for tema 3.</p>
+            <p>Placeholder text for tema 3.</p>
           </div>
-          <div class="tema_item tema4">
+          <div id="projekt4" class="tema_item tema4">
             <img class="tema4bil" src="img/passionssite.png" alt="Passion" />
-            <p id="projekt4">Placeholder text for tema 4.</p>
+            <p>Placeholder text for tema 4.</p>
           </div>
-          <div class="tema_item tema5">
+          <div id="projekt5" class="tema_item tema5">
             <img class="tema5bil" src="img/virksomhedssite.png" alt="Åbenbar" />
-            <p id="projekt5">Placeholder text for tema 5.</p>
+            <p>Placeholder text for tema 5.</p>
           </div>
         </div>
       </div>
@@ -109,8 +144,9 @@
         <a href="index.html">
           <img class="logo2" src="img/Artboard 1.svg" alt="logo" />
         </a>
-
-        &#169;Alberte Bøtkjær
+        <div class="copyright">
+          <p>&#169;Alberte Bøtkjær</p>
+        </div>
       </div>
     </footer>
   </body>

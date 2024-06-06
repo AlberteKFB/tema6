@@ -14,7 +14,24 @@
   background: linear-gradient(180deg, #61a6fa, #f9f9f9);
   /* background: #ffffff; */
 }
+#sec2 {
+  background-color: #3f6a9e;
+}
+#sec2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
 
+#sec2 h1 {
+  flex: 2; /* Giver h1 lidt mere plads */
+}
+
+#sec2 p {
+  flex: 1; /* Gør at p fylder mindre i bredden */
+  max-width: 300px; /* Giver en maksimal bredde til p for kortere linjer */
+  padding-right: 50px;
+}
 section {
   display: flex;
   justify-content: space-between;
@@ -29,18 +46,17 @@ section .curve {
 
 .wave {
   position: absolute;
-  bottom: 0;
+  bottom: -5px;
   left: 0;
 }
 
-.typing-text {
-  width: 100%;
-  overflow: hidden; /* Ensures the animated text doesn't spill out */
-  white-space: nowrap; /* Keeps the text in a single line */
-  border-right: 0.15em solid #3f6a9e; /* The typewriter cursor */
-  margin: 0 auto; /* Centering the text */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 5s steps(37, end), blink-caret.75s step-end infinite;
+/* .typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #3f6a9e;
+
+  animation: typing 6s steps(23, end), blink-caret.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -60,12 +76,47 @@ section .curve {
   50% {
     border-color: rgb(28, 19, 82);
   }
+} */
+
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 0.15em solid #3f6a9e;
+  animation: typing 5s steps(20, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 20ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(28, 19, 82);
+  }
+}
+
+/*forside billede*/
+.computer {
+  border-radius: 44% 56% 60% 40% / 41% 45% 55% 59%;
+  max-width: 60vh;
+  box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
 }
 /* Om mig*/
 
 .ommig {
   border-radius: 40% 55% 70% 30% / 30% 36% 64% 70%;
-  max-width: 60vh;
+  max-width: 80%;
+  height: auto;
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
 }
 
@@ -73,11 +124,6 @@ section .curve {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1em;
-}
-
-.ommig {
-  max-width: 80%; /* Sørg for at billedet ikke overstiger forælderens bredde */
-  height: auto; /* Gør billedet responsivt */
 }
 
 .ommigtekst {
@@ -88,17 +134,27 @@ section .curve {
 .ommigtekst p {
   margin: 0; /* Fjern margin fra overskrift og afsnit */
 }
+.snirkel {
+  display: flex;
+  justify-content: center;
+}
 
+.snirkel img {
+  max-width: 100%;
+  height: auto;
+}
 .grid-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   gap: 3em;
+  padding-top: 20%;
 }
 .grid-1-1-1 > div {
   border-radius: 20px;
-  padding: 20px;
+  padding: 40px;
   margin: 10px;
-  background-color: #f9f9f9;
+  background-color: #87cbfa;
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
 }
 .uddannelse {
@@ -111,6 +167,17 @@ section .curve {
 
 .kompetencer {
   max-width: 100%;
+}
+
+.kontakt {
+  text-align: center;
+  padding: 30px; /* Tilføj indvendig afstand */
+}
+.kontakt img {
+  padding-top: 15px;
+}
+.kontakt p {
+  padding-top: 10px;
 }
 svg.wave2 {
   margin: 0;
@@ -287,7 +354,7 @@ body {
 
 /*media*/
 
-@media (min-width: 500px) {
+@media (min-width: 699px) {
   .header li,
   .header_tema li {
     float: left;
@@ -308,7 +375,7 @@ body {
   }
 }
 
-@media (max-width: 499px) {
+@media (max-width: 700px) {
   .header ul {
     margin: 0;
     padding-right: 20px;
@@ -338,6 +405,14 @@ body {
   }
 }
 
+@media (max-width: 700px) {
+  /*section 2 på forsiden*/
+
+  #sec2 {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
 /*tema side*/
 #temasite {
   padding: 80px;
@@ -379,10 +454,12 @@ body {
 .tema_container {
   display: flex;
   flex-direction: column;
-
-  gap: 70px; /* Adjust the gap between items as needed */
+  gap: 200px;
+  padding-top: 20%;
 }
-
+.tema_container img {
+  box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
+}
 .tema_item {
   display: flex;
   /* flex-direction: column; */
@@ -428,7 +505,7 @@ body {
   z-index: 11;
 }
 
-@media (max-width: 499px) {
+@media (max-width: 700px) {
   .grid-1-1 {
     grid-template-columns: 1fr;
   }
@@ -450,7 +527,7 @@ body {
 }
 
 /*Tema media*/
-@media (max-width: 499px) {
+@media (max-width: 700px) {
   .tema_item {
     flex-direction: column !important; /* Force column direction */
     align-items: center !important; /* Force center alignment */
@@ -466,4 +543,140 @@ body {
   .tema_item p {
     margin: 0 !important; /* Override default margins */
   }
+}
+
+.links-grid {
+  display: grid;
+  gap: 20px;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  justify-content: center;
+}
+
+.links-grid .circle-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+
+  background-color: #87cbfa;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.links-grid .circle-link:hover {
+  background-color: #3f6a9e;
+}
+
+.links-grid .circle-link:nth-child(1) {
+  border-radius: 44% 56% 60% 40% / 19% 62% 38% 81%;
+}
+
+.links-grid .circle-link:nth-child(2) {
+  border-radius: 55% 45% 60% 40% / 46% 62% 38% 54%;
+}
+
+.links-grid .circle-link:nth-child(3) {
+  border-radius: 67% 33% 77% 23% / 32% 62% 38% 68%;
+}
+
+.links-grid .circle-link:nth-child(4) {
+  border-radius: 47% 53% 83% 17% / 32% 78% 22% 63%;
+}
+
+.links-grid .circle-link:nth-child(5) {
+  border-radius: 59% 41% 41% 59% / 63% 52% 48% 37%;
+}
+
+@media (max-width: 700px) {
+  .links-grid .circle-link {
+    width: 100px;
+    height: 100px;
+    font-size: 10px;
+  }
+  .links-grid {
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+  }
+
+  .links-grid .circle-link:nth-child(1),
+  .links-grid .circle-link:nth-child(2) {
+    grid-column: span 1;
+  }
+
+  .links-grid .circle-link:nth-child(3) {
+    grid-column: span 2;
+  }
+
+  .links-grid .circle-link:nth-child(4),
+  .links-grid .circle-link:nth-child(5) {
+    grid-column: span 1;
+  }
+}
+
+@media (min-width: 699px) {
+  .links-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+
+  .links-grid .circle-link:nth-child(1) {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .links-grid .circle-link:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  .links-grid .circle-link:nth-child(3) {
+    grid-column: 3;
+    grid-row: 1;
+  }
+
+  .links-grid .circle-link:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row: 2;
+  }
+
+  .links-grid .circle-link:nth-child(5) {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row: 2;
+  }
+}
+
+/*knap til hjemmesider/projekter*/
+.blue-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff; /* Hvid tekst */
+  background-color: #007bff; /* Blå baggrund */
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none; /* Fjern understregning */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Glidende overgang for hover-effekt */
+}
+
+/* Hover-effekt for knappen */
+.blue-button:hover {
+  background-color: #0056b3; /* Mørkere blå ved hover */
+}
+
+/* Aktiv effekt for knappen */
+.blue-button:active {
+  background-color: #004080; /* Endnu mørkere blå ved klik */
 }

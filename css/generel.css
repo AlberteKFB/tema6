@@ -1,5 +1,6 @@
 a {
-  color: #f9f9f9;
+  color: #6596d6;
+  text-decoration: none;
 }
 .om {
   background-color: #f9f9f9;
@@ -8,6 +9,40 @@ footer {
   background-color: #f9f9f9;
   margin: 0;
   padding: 0;
+}
+ul {
+  list-style: none;
+}
+li a:hover {
+  color: #1d2e60;
+}
+h1,
+h2,
+p {
+  color: #1d2e60;
+}
+
+.copyright p {
+  color: #f9f9f9;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+p {
+  font-size: 18px;
+  font-family: libre;
+}
+
+li {
+  font-size: 20px;
+}
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 35px;
+  }
 }
 @font-face {
   font-family: bright;
@@ -19,9 +54,28 @@ footer {
   src: url(../fonts/webfontkit-20240604-082905/catilde_reguler-webfont.woff2);
 }
 
+@font-face {
+  font-family: libre;
+  src: url(../fonts/webfontkit-20240606-104554/librebaskerville-regular-webfont.woff2);
+}
+
 h1,
 h2,
 ul,
 a {
   font-family: catilde;
+}
+
+#sec2 h1,
+#sec2 p {
+  color: #f9f9f9;
+}
+
+.uddannelse ul li,
+.arbejde ul li {
+  font-family: libre;
+  list-style-type: disc;
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 10px;
 }
