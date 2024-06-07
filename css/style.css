@@ -49,33 +49,9 @@ section .curve {
   bottom: -5px;
   left: 0;
 }
-
-/* .typing-text {
+/* .mirror {
+  transform: scaleX(-1);
   display: inline-block;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 0.15em solid #3f6a9e;
-
-  animation: typing 6s steps(23, end), blink-caret.75s step-end infinite;
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: rgb(28, 19, 82);
-  }
 } */
 
 .typing-text {
@@ -83,7 +59,7 @@ section .curve {
   overflow: hidden;
   white-space: nowrap;
   border-right: 0.15em solid #3f6a9e;
-  animation: typing 5s steps(20, end), blink-caret 0.75s step-end infinite;
+  animation: typing 5s steps(15, end), blink-caret 0.75s step-end infinite;
 }
 
 @keyframes typing {
@@ -91,7 +67,7 @@ section .curve {
     width: 0;
   }
   to {
-    width: 20ch;
+    width: 15ch;
   }
 }
 
@@ -146,17 +122,25 @@ section .curve {
 .grid-1-1-1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-
   gap: 3em;
   padding-top: 20%;
 }
+
 .grid-1-1-1 > div {
   border-radius: 20px;
   padding: 40px;
   margin: 10px;
   background-color: #87cbfa;
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
+  display: flex;
+  flex-direction: column;
+  height: 80%; /* Gør hver div til samme højde som grid-cellen */
 }
+
+.grid-1-1-1 ul li {
+  color: #004080;
+}
+
 .uddannelse {
   max-width: 100%;
 }
@@ -196,15 +180,12 @@ burger menu
 
 body {
   margin: 0;
-
-  /* background-color: #f4f4f4; */
 }
 
 /* header */
 
 .header,
 .header_tema {
-  /* background-color: #ffffff; */
   position: fixed;
   width: 100%;
   z-index: 3;
@@ -217,8 +198,8 @@ body {
   padding-right: 20px;
   list-style: none;
   overflow: hidden;
-  /* background-color: #ffffff;
-  border-radius: 10%; */
+
+  /*border-radius: 10%; */
 }
 
 .header li a,
@@ -233,7 +214,7 @@ body {
 .header .menu-btn:hover,
 .header_tema li a:hover,
 .header_tema .menu-btn:hover {
-  color: #87cbfa;
+  color: #ff9925;
 }
 
 .header .logo,
@@ -303,10 +284,6 @@ body {
   transition: all 0.2s ease-out;
   width: 100%;
 }
-/* .header li a:hover,
-.header .menu-btn:hover {
-  background-color: #ffffff;
-} */
 
 .header .menu-icon .navicon:before,
 .header_tema .menu-icon .navicon:before {
@@ -422,33 +399,27 @@ body {
 .tema1bil {
   border-radius: 31% 69% 92% 8% / 57% 67% 33% 43%;
   max-width: 80vh;
-  width: 316%;
-  height: 291%;
 }
 .tema2bil {
   border-radius: 40% 55% 70% 30% / 30% 36% 64% 70%;
   max-width: 80vh;
-  width: 316%;
-  height: 291%;
 }
 
 .tema3bil {
   border-radius: 40% 55% 70% 30% / 30% 36% 64% 70%;
   max-width: 80vh;
-  width: 316%;
-  height: 291%;
+  /* width: 316%;
+  height: 291%; */
 }
 .tema4bil {
   border-radius: 44% 56% 81% 19% / 23% 64% 36% 77%;
   max-width: 80vh;
-  width: 316%;
-  height: 291%;
 }
 .tema5bil {
   border-radius: 44% 56% 18% 82% / 41% 64% 36% 59%;
   max-width: 80vh;
-  width: 380%;
-  height: 316%;
+  /* width: 380%;
+  height: 316%; */
 }
 
 .tema_container {
@@ -460,33 +431,28 @@ body {
 .tema_container img {
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
 }
-.tema_item {
+/* .tema_item {
   display: flex;
-  /* flex-direction: column; */
+
   align-items: center;
-}
-
-.tema_item:nth-child(odd) {
-  flex-direction: row-reverse;
-}
-
-/* .hero dotlottie-player {
-  width: 100%;
-  z-index: 1;
-}
-
-.svgs_container {
-  width: 100%;
-  margin-top: -25%;
-  z-index: 10;
-}
-
-.svgs_container svg {
-  display: block;
-  margin-top: -12px;
-  width: 100%;
-  z-index: 11;
 } */
+
+/* .tema_item:nth-child(odd) {
+  flex-direction: row-reverse;
+} */
+
+.tema_item h2 {
+  order: -1;
+
+  text-align: center;
+}
+.tema_item:nth-child(odd) img {
+  float: left;
+}
+
+.tema_item:nth-child(even) img {
+  float: right;
+}
 
 .hero {
   position: relative;
@@ -523,25 +489,63 @@ body {
 
   .grid-1-1-1 > div {
     order: initial; /* Sørger for at de efterfølgende sektioner står lodret */
+    height: auto;
   }
 }
 
 /*Tema media*/
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
   .tema_item {
-    flex-direction: column !important; /* Force column direction */
-    align-items: center !important; /* Force center alignment */
-    justify-content: center !important; /* Force vertical centering */
-    text-align: center !important; /* Force text centering */
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+   
   }
 
   .tema_item img {
-    width: 100% !important; /* Enforce responsive sizing */
-    margin-bottom: 10px !important; /* Enforce spacing */
+    width: 100% !important;
+    margin-bottom: 10px !important;
   }
 
   .tema_item p {
-    margin: 0 !important; /* Override default margins */
+    margin: 0 !important;
+  }
+} */
+@media (max-width: 700px) {
+  .tema_item {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrer elementer vandret */
+    justify-content: center; /* Centrer elementer lodret */
+  }
+
+  .tema_item img {
+    width: 100%;
+    margin-bottom: 10px;
+    order: 2; /* Flyt billedet til bunden af .tema_item */
+  }
+
+  .tema_item p {
+    margin: 0;
+    order: 3; /* Flyt teksten under billedet */
+  }
+
+  .tema_item h2 {
+    order: 1; /* Flyt overskriften til toppen af .tema_item */
+  }
+}
+@media (min-width: 699px) {
+  .tema_item img {
+    margin-right: 20px; /* Tilføj mellemrum til højre for billedet */
+  }
+
+  .tema_item p {
+    margin-left: 20px; /* Tilføj mellemrum til venstre for teksten */
+    margin-right: 20px; /* Tilføj mellemrum til højre for teksten */
+  }
+
+  .tema_item h2 {
+    margin-bottom: 50px; /* Tilføj mellemrum under overskriften */
   }
 }
 
@@ -563,7 +567,7 @@ body {
   height: 200px;
 
   background-color: #87cbfa;
-  color: white;
+  color: #f9f9f9;
   text-align: center;
   text-decoration: none;
   font-size: 20px;
@@ -571,7 +575,7 @@ body {
 }
 
 .links-grid .circle-link:hover {
-  background-color: #3f6a9e;
+  background-color: #ff9925;
 }
 
 .links-grid .circle-link:nth-child(1) {
@@ -662,7 +666,7 @@ body {
   padding: 10px 20px;
   font-size: 16px;
   color: #fff; /* Hvid tekst */
-  background-color: #007bff; /* Blå baggrund */
+  background-color: #87cbfa; /* Blå baggrund */
   border: none;
   border-radius: 5px;
   text-align: center;
@@ -673,7 +677,7 @@ body {
 
 /* Hover-effekt for knappen */
 .blue-button:hover {
-  background-color: #0056b3; /* Mørkere blå ved hover */
+  background-color: #ff9925; /* Mørkere blå ved hover */
 }
 
 /* Aktiv effekt for knappen */

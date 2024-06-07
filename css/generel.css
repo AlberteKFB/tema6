@@ -2,7 +2,8 @@ a {
   color: #6596d6;
   text-decoration: none;
 }
-.om {
+.om,
+.bgtema {
   background-color: #f9f9f9;
 }
 footer {
@@ -18,6 +19,7 @@ li a:hover {
 }
 h1,
 h2,
+h3,
 p {
   color: #1d2e60;
 }
@@ -29,19 +31,61 @@ p {
 h1 {
   font-size: 60px;
 }
+.curve h1 {
+  font-size: 90px;
+}
+
+h2 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+h3 {
+  font-size: 22px;
+  padding-bottom: 10px;
+}
 
 p {
   font-size: 18px;
   font-family: libre;
+  line-height: 1.7;
 }
 
 li {
   font-size: 20px;
 }
+.uddannelse ul li,
+.arbejde ul li,
+.kompetencer ul li {
+  font-family: libre;
+  /* list-style-type: disc; */
+  font-size: 16px;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
 
 @media (max-width: 600px) {
   h1 {
     font-size: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+  h3 {
+    font-size: 17px;
+  }
+  p {
+    font-size: 12px;
+  }
+
+  li {
+    font-size: 15px;
+  }
+  .uddannelse ul li,
+  .arbejde ul li,
+  .kompetencer ul li {
+    font-size: 12px;
   }
 }
 @font-face {
@@ -65,17 +109,13 @@ ul,
 a {
   font-family: catilde;
 }
-
-#sec2 h1,
-#sec2 p {
-  color: #f9f9f9;
+.menu a {
+  font-family: libre;
 }
 
-.uddannelse ul li,
-.arbejde ul li {
-  font-family: libre;
-  list-style-type: disc;
-  font-size: 16px;
-  margin-bottom: 15px;
-  margin-top: 10px;
+#sec2 h1 {
+  color: #ff9925;
+}
+#sec2 p {
+  color: #f9f9f9;
 }
