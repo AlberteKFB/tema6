@@ -364,6 +364,7 @@ body {
     list-style: none;
     overflow: hidden;
     background-color: #3f6a9e;
+
     z-index: 12;
   }
   .header_tema {
@@ -554,8 +555,9 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  max-width: 65px;
-  margin: 10px;
+
+  display: inline-block;
+  margin-top: 20px;
 }
 
 /* Hover-effekt for knappen */
@@ -701,8 +703,8 @@ body {
 }
 
 .grid-container .text-wrapper2 a {
-  display: block;
   margin-top: 10px;
+  margin: 10px;
 }
 
 @media (max-width: 900px) {
