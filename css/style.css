@@ -183,7 +183,7 @@ body {
 .header_tema {
   position: fixed;
   width: 100%;
-  z-index: 3;
+  z-index: 15;
 }
 
 .header ul,
@@ -364,7 +364,6 @@ body {
     list-style: none;
     overflow: hidden;
     background-color: #3f6a9e;
-
     z-index: 12;
   }
   .header_tema {

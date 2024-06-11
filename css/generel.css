@@ -119,6 +119,7 @@ h3,
 ul,
 a {
   font-family: catilde;
+  letter-spacing: 2px;
 }
 .menu a {
   font-family: libre;
