@@ -30,6 +30,7 @@ p {
 
 h1 {
   font-size: 60px;
+  line-height: 1;
 }
 .curve h1 {
   font-size: 90px;
@@ -45,10 +46,15 @@ h3 {
   padding-bottom: 10px;
 }
 
+.bgtema h3 {
+  padding-left: 10px;
+}
+
 p {
   font-size: 18px;
   font-family: libre;
   line-height: 1.7;
+  padding-top: 15px;
 }
 
 li {
@@ -58,19 +64,19 @@ li {
 .arbejde ul li,
 .kompetencer ul li {
   font-family: libre;
-  /* list-style-type: disc; */
+
   font-size: 16px;
   margin-bottom: 15px;
   margin-top: 10px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 699px) {
   h1 {
     font-size: 35px;
   }
 
   h2 {
-    font-size: 20px;
+    font-size: 25px;
   }
   h3 {
     font-size: 17px;
@@ -86,6 +92,10 @@ li {
   .arbejde ul li,
   .kompetencer ul li {
     font-size: 12px;
+  }
+
+  .curve h1 {
+    font-size: 60px;
   }
 }
 @font-face {
@@ -105,6 +115,7 @@ li {
 
 h1,
 h2,
+h3,
 ul,
 a {
   font-family: catilde;

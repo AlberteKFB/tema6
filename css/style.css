@@ -4,7 +4,6 @@
 }
 
 #sec1 {
-  position: width 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
@@ -12,7 +11,6 @@
   padding: 80px;
   box-sizing: border-box;
   background: linear-gradient(180deg, #61a6fa, #f9f9f9);
-  /* background: #ffffff; */
 }
 #sec2 {
   background-color: #3f6a9e;
@@ -24,12 +22,12 @@
 }
 
 #sec2 h1 {
-  flex: 2; /* Giver h1 lidt mere plads */
+  flex: 2;
 }
 
 #sec2 p {
-  flex: 1; /* Gør at p fylder mindre i bredden */
-  max-width: 300px; /* Giver en maksimal bredde til p for kortere linjer */
+  flex: 1;
+  max-width: 300px;
   padding-right: 50px;
 }
 section {
@@ -49,10 +47,6 @@ section .curve {
   bottom: -5px;
   left: 0;
 }
-/* .mirror {
-  transform: scaleX(-1);
-  display: inline-block;
-} */
 
 .typing-text {
   display: inline-block;
@@ -94,6 +88,7 @@ section .curve {
   max-width: 80%;
   height: auto;
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
+  margin-left: 70px;
 }
 
 .grid-1-1 {
@@ -108,7 +103,7 @@ section .curve {
 
 .ommigtekst h1,
 .ommigtekst p {
-  margin: 0; /* Fjern margin fra overskrift og afsnit */
+  margin: 0;
 }
 .snirkel {
   display: flex;
@@ -134,7 +129,7 @@ section .curve {
   box-shadow: 0 4px 8px rgba(0, 3, 92, 0.283);
   display: flex;
   flex-direction: column;
-  height: 80%; /* Gør hver div til samme højde som grid-cellen */
+  height: 80%;
 }
 
 .grid-1-1-1 ul li {
@@ -155,7 +150,7 @@ section .curve {
 
 .kontakt {
   text-align: center;
-  padding: 30px; /* Tilføj indvendig afstand */
+  padding: 30px;
 }
 .kontakt img {
   padding-top: 15px;
@@ -189,7 +184,6 @@ body {
   position: fixed;
   width: 100%;
   z-index: 3;
-  padding-left: 20px;
 }
 
 .header ul,
@@ -198,8 +192,6 @@ body {
   padding-right: 20px;
   list-style: none;
   overflow: hidden;
-
-  /*border-radius: 10%; */
 }
 
 .header li a,
@@ -229,6 +221,7 @@ body {
 .logo1 {
   max-width: 50px;
   height: auto;
+  padding-left: 10px;
 }
 
 .logo2 {
@@ -350,6 +343,10 @@ body {
   .header_tema .menu-icon {
     display: none;
   }
+
+  .curve h1 {
+    padding: 0;
+  }
 }
 
 @media (max-width: 700px) {
@@ -359,7 +356,6 @@ body {
     list-style: none;
     overflow: hidden;
     background-color: #3f6a9e;
-    /* border-radius: 10%; */
   }
 
   .header_tema ul {
@@ -368,7 +364,7 @@ body {
     list-style: none;
     overflow: hidden;
     background-color: #3f6a9e;
-    /* border-radius: 10%; */
+
     z-index: 12;
   }
   .header_tema {
@@ -383,11 +379,19 @@ body {
 }
 
 @media (max-width: 700px) {
+  /*wave1 på forside*/
+  .wave {
+    bottom: -60px;
+  }
+
   /*section 2 på forsiden*/
 
   #sec2 {
     flex-direction: column;
     align-items: stretch;
+  }
+  #sec2 p {
+    padding-top: 15px;
   }
 }
 
@@ -408,7 +412,7 @@ body {
   z-index: 11;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .grid-1-1 {
     grid-template-columns: 1fr;
   }
@@ -428,6 +432,9 @@ body {
     order: initial; /* Sørger for at de efterfølgende sektioner står lodret */
     height: auto;
   }
+  .ommig {
+    margin-left: 30px;
+  }
 }
 
 .links-grid {
@@ -435,7 +442,7 @@ body {
   gap: 20px;
   justify-items: center;
   align-items: center;
-  width: 80%;
+
   margin: auto;
   justify-content: center;
 }
@@ -543,7 +550,6 @@ body {
 
 /*knap til hjemmesider/projekter*/
 .blue-button {
-  display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
   color: #fff;
@@ -554,18 +560,18 @@ body {
   text-decoration: none;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  max-width: 60px;
-  align-self: center;
+  max-width: 65px;
+  margin: 10px;
 }
 
 /* Hover-effekt for knappen */
 .blue-button:hover {
-  background-color: #ff9925; /* Mørkere blå ved hover */
+  background-color: #ff9925;
 }
 
 /* Aktiv effekt for knappen */
 .blue-button:active {
-  background-color: #004080; /* Endnu mørkere blå ved klik */
+  background-color: #004080;
 }
 
 /*tema side*/
@@ -584,7 +590,8 @@ body {
   max-width: 80vh;
 }
 .tema2bil,
-.tema9bil {
+.tema9bil,
+.tema6bil {
   border-radius: 40% 55% 70% 30% / 30% 36% 64% 70%;
   max-width: 80vh;
 }
@@ -593,16 +600,13 @@ body {
 .tema8bil {
   border-radius: 40% 55% 70% 30% / 30% 36% 64% 70%;
   max-width: 80vh;
-  /* width: 316%;
-  height: 291%; */
 }
 .tema4bil,
 .tema7bil {
   border-radius: 44% 56% 81% 19% / 23% 64% 36% 77%;
   max-width: 80vh;
 }
-.tema5bil,
-.tema6bil {
+.tema5bil {
   border-radius: 44% 56% 18% 82% / 41% 64% 36% 59%;
   max-width: 80vh;
 }
@@ -610,15 +614,14 @@ body {
 .tema_container {
   display: flex;
   flex-direction: column;
-  gap: 40px;
-  padding: 20px;
+  gap: 90px;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .tema_item {
   padding: 20px;
   border-radius: 8px;
-  padding-top: 90px;
-  margin-bottom: 40px;
 }
 .tema_item p {
   margin-left: 20px;
@@ -630,7 +633,7 @@ body {
   font-size: 15px;
 }
 
-h2 {
+.tema_container h2 {
   text-align: center;
 }
 
@@ -676,18 +679,8 @@ h2 {
   grid-row: 1 / 2;
 }
 
-.grid-container .text-wrapper {
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
-}
-
 .grid-container .tema8bil {
   grid-column: 2 / 3;
-  grid-row: 2 / 3;
-}
-
-.grid-container .text-wrapper2 {
-  grid-column: 1 / 2;
   grid-row: 2 / 3;
 }
 
@@ -718,7 +711,7 @@ h2 {
   margin-top: 10px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   .grid-container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto auto;
@@ -765,12 +758,15 @@ h2 {
   .grid-container .tema5bil,
   .grid-container .tema7bil {
     grid-column: 1 / -1; /* Udvid kolonnen for at fylde hele bredden */
-    grid-row: auto; /* Lad browseren bestemme rækkeplaceringen */
-    width: 100%; /* Gør billederne fulde bredde */
-    height: auto; /* Tilpas højden for at bevare billedets proportioner */
+    grid-row: auto;
+    width: 100%;
+    height: auto;
   }
 
   #temasite {
     padding: 0;
+  }
+  #temasite h1 {
+    padding-top: 130px;
   }
 }
